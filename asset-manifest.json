@@ -1,13 +1,24 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-08-phonebook/static/css/main.bf30146c.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.c7df59b8.js",
+    "main.css": "/goit-react-hw-08-phonebook/static/css/main.e387e85a.css",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.45dc92a8.js",
+    "static/js/485.246572c0.chunk.js": "/goit-react-hw-08-phonebook/static/js/485.246572c0.chunk.js",
+    "static/js/525.1860daef.chunk.js": "/goit-react-hw-08-phonebook/static/js/525.1860daef.chunk.js",
+    "static/js/617.86ef6dca.chunk.js": "/goit-react-hw-08-phonebook/static/js/617.86ef6dca.chunk.js",
+    "static/js/142.8e69cabf.chunk.js": "/goit-react-hw-08-phonebook/static/js/142.8e69cabf.chunk.js",
+    "static/js/75.9479011c.chunk.js": "/goit-react-hw-08-phonebook/static/js/75.9479011c.chunk.js",
+    "static/media/minion.gif": "/goit-react-hw-08-phonebook/static/media/minion.cdb0650cd361e74da21d.gif",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.bf30146c.css.map": "/goit-react-hw-08-phonebook/static/css/main.bf30146c.css.map",
-    "main.c7df59b8.js.map": "/goit-react-hw-08-phonebook/static/js/main.c7df59b8.js.map"
+    "main.e387e85a.css.map": "/goit-react-hw-08-phonebook/static/css/main.e387e85a.css.map",
+    "main.45dc92a8.js.map": "/goit-react-hw-08-phonebook/static/js/main.45dc92a8.js.map",
+    "485.246572c0.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/485.246572c0.chunk.js.map",
+    "525.1860daef.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/525.1860daef.chunk.js.map",
+    "617.86ef6dca.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/617.86ef6dca.chunk.js.map",
+    "142.8e69cabf.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/142.8e69cabf.chunk.js.map",
+    "75.9479011c.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/75.9479011c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf30146c.css",
-    "static/js/main.c7df59b8.js"
+    "static/css/main.e387e85a.css",
+    "static/js/main.45dc92a8.js"
   ]
 }
