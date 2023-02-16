@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchContacts } from "redux/contactThunk";
-import { selectLoadinStatus, selectErrorStatus, selectFiltredContacts } from "redux/selectors";
+import { fetchContacts } from "redux/contacts/contactThunk";
+import { selectLoadinStatus, selectErrorStatus, selectFiltredContacts } from "redux/contacts/contactsSelectors";
 import { ThreeDots } from "react-loader-spinner";
 import { ContactItem } from "components/ContactItem/ContactItem";
 import { toast } from "react-toastify";

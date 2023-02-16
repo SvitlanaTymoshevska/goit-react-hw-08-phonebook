@@ -10,7 +10,7 @@ export const Item = styled.li`
 export const Button = styled.button`
     margin-left: 20px;
     width: 80px;
-    height: 20px;
+    height: 24px;
     border: 2px solid darkgray;
     border-radius: 4px;
     cursor: pointer;
@@ -18,6 +18,8 @@ export const Button = styled.button`
 
       &:hover {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        background-color: deepskyblue;
+        color: white;
+        background-color: green;
+        border: 2px solid transparent;
     }
 `;

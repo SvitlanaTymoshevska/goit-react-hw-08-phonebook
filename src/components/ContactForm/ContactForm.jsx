@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectContacts } from "redux/selectors";
-import { addContact } from "redux/contactThunk";
+import { selectContacts } from "redux/contacts/contactsSelectors";
+import { addContact } from "redux/contacts/contactThunk";
 import { toast } from "react-toastify";
-import { Form, Label, LabelName, Input, Button } from "components/ContactForm/ContactFotm.styled";
+import { Form, Label, LabelName, Input, Button } from "components/ContactForm/ContactForm.styled";
 
 const contactInList = (contacts, name, phone) => { 
     let nameFinded = null;
