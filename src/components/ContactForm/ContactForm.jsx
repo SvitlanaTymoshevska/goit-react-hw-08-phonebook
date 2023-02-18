@@ -4,12 +4,12 @@ import { addContact } from "redux/contacts/contactThunk";
 import { toast } from "react-toastify";
 import { Form, Label, LabelName, Input, Button } from "components/ContactForm/ContactForm.styled";
 
-const contactInList = (contacts, name, phone) => { 
+const contactInList = (contacts, name, number) => { 
     let nameFinded = null;
 
     if (contacts) {
         nameFinded = contacts.find(contact => { 
-            if (contact.name.toLowerCase() === name.toLowerCase() && contact.phone === phone) {
+            if (contact.name.toLowerCase() === name.toLowerCase() && contact.number === number) {
                 return contact.name;
             };
             return undefined;
@@ -32,13 +32,13 @@ export const ContactForm = () => {
         event.preventDefault();
         const form = event.target;
         const name = form.elements.name.value; 
-        const phone = form.elements.phone.value; 
+        const number = form.elements.number.value; 
 
-        if (contactInList(contacts, name, phone)) { 
+        if (contactInList(contacts, name, number)) { 
             return;
         }
 
-        dispatch(addContact({ name, phone }));
+        dispatch(addContact({ name, number }));
         const notifyInfo = (message) => toast.info(message);
         notifyInfo(`Added contact "${name}"`);
         form.reset();
@@ -64,7 +64,7 @@ export const ContactForm = () => {
                 </LabelName>        
                 <Input
                     type="tel"
-                    name="phone"
+                    name="number"
                     pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                     required

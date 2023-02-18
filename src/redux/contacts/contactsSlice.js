@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact } from "redux/contacts/contactThunk";
 
-export const contaktsInitialState = {items: [],
-                              isLoading: false,
-                              error: null};
+export const contaktsInitialState = {
+  items: [],
+  isLoading: false,
+  error: null
+};
 
 const contactsSlice = createSlice({
   name: "contacts",

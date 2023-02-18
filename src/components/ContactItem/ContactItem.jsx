@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { Item, Button } from "components/ContactItem/ContactItem.styled";
 
 export const ContactItem = ({ contact }) => {
-    const { id, name, phone } = contact;
+    const { id, name, number } = contact;
     const dispatch = useDispatch();
 
     const handleDelete = () => { 
@@ -16,7 +16,7 @@ export const ContactItem = ({ contact }) => {
 
     return (
         <Item>
-            {name}: {phone}
+            {name}: {number}
             <Button
                 type="button"
                 onClick={handleDelete}>
@@ -30,6 +30,6 @@ ContactItem.propTypes = {
     contact: PropTypes.shape({
         id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        phone: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
     })
 };

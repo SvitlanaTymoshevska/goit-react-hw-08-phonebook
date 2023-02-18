@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { selectAuthStatus } from "redux/auth/authSelectors";
+import { AUTH_STATUS } from "constants/constants";
 import { fetchContacts } from "redux/contacts/contactThunk";
 import { selectLoadinStatus, selectErrorStatus, selectFiltredContacts } from "redux/contacts/contactsSelectors";
 import { ThreeDots } from "react-loader-spinner";
@@ -8,13 +10,16 @@ import { toast } from "react-toastify";
 
 export const ContactList = () => {
     const dispatch = useDispatch();
+    const authStatus = useSelector(selectAuthStatus);
     const contacts = useSelector(selectFiltredContacts);
     const isLoading = useSelector(selectLoadinStatus);
     const error = useSelector(selectErrorStatus);
 
     useEffect(() => {
-        dispatch(fetchContacts());
-    }, [dispatch]);
+        if (authStatus === AUTH_STATUS.logIn) {
+            dispatch(fetchContacts());
+        }
+    }, [authStatus, dispatch]);
 
     
     if (error) {
@@ -36,15 +41,15 @@ export const ContactList = () => {
                 visible={true}
                 />}
 
-            {contacts.length && !isLoading && !error && 
-                (<ul>
+            {(contacts && !isLoading && !error) && 
+                <ul> 
                     {contacts.map(contact => (
                         <ContactItem
                             key={contact.id}
                             contact={contact}
                         />
                     ))}
-                </ul>)}
+                </ul>}
 
             {!contacts.length && !isLoading && !error && <p>Contacts not found</p>}
         </>
