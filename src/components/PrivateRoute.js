@@ -6,5 +6,5 @@ import { AUTH_STATUS } from "constants/constants";
 export const PrivateRoute = ({ redirectTo = "/", component: Component}) => {
     const authStatus = useSelector(selectAuthStatus);
     const shouldRedirect = authStatus !== AUTH_STATUS.logIn && authStatus !== AUTH_STATUS.refreshing;
-    return shouldRedirect ? <Navigate to={redirectTo} /> : Component;
+    return shouldRedirect ? <Navigate to={redirectTo} replace /> : Component;
 };

@@ -5,5 +5,5 @@ import { AUTH_STATUS } from "constants/constants";
 
 export const RestrictedRoute = ({ redirectTo = "/", component: Component }) => {
     const authStatus = useSelector(selectAuthStatus);
-    return authStatus === AUTH_STATUS.logIn ? <Navigate to={redirectTo} /> : Component;
+    return authStatus === AUTH_STATUS.logIn ? <Navigate to={redirectTo} replace /> : Component;
 };
